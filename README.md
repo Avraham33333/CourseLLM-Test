@@ -127,7 +127,15 @@ The dev script is configured to run on port **9002**, so the frontend is at:
 
 ---
 
-## 6. Dependencies (high level)
+## 6. How to Login
+
+Navigate to `http://localhost:9002/login` and click "Sign in with Google".
+- New users are redirected to `/onboarding` to complete their profile
+- Returning users go directly to their dashboard (`/student` or `/teacher`)
+
+---
+
+## 7. Dependencies (high level)
 
 ### JavaScript / Next.js
 
@@ -158,7 +166,7 @@ Python dependencies are defined in `requirements.txt`:
 
 ---
 
-## 7. Production Environment
+## 8. Production Environment
 
 For production deployment, create a `.env` file (not `.env.local`) with production Firebase values:
 
@@ -181,7 +189,7 @@ GOOGLE_API_KEY=your-google-api-key
 
 ---
 
-## 8. DataConnect (PostgreSQL)
+## 9. DataConnect (PostgreSQL)
 
 This project uses Firebase DataConnect with Cloud SQL (PostgreSQL).
 
@@ -233,7 +241,7 @@ After running `npm install` (which triggers `npm run dataconnect:generate`):
 
 ---
 
-## 9. DSPy Backend API (overview)
+## 10. DSPy Backend API (overview)
 
 The Python backend exposes a small HTTP API (FastAPI) on `http://127.0.0.1:8001`.  
 The Next.js app calls these endpoints via server actions in  
@@ -241,7 +249,7 @@ The Next.js app calls these endpoints via server actions in
 
 All endpoints are **POST** and use JSON.
 
-### 9.1 `POST /answer`
+### 10.1 `POST /answer`
 
 - **Purpose:** Answer a student’s question about a course.
 - **Request body (simplified):**
@@ -252,7 +260,7 @@ All endpoints are **POST** and use JSON.
   - `answer`: string
   - optional: `reasoning`, `sources`
 
-### 9.2 `POST /assess`
+### 10.2 `POST /assess`
 
 - **Purpose:** Assess a student’s free-text answer.
 - **Request body (simplified):**
@@ -263,7 +271,7 @@ All endpoints are **POST** and use JSON.
   - `score`: number (e.g., 0–100 or 0–1)
   - `feedback`: string
 
-### 9.3 `POST /summarize`
+### 10.3 `POST /summarize`
 
 - **Purpose:** Summarize course content or a given text.
 - **Request body (simplified):**
@@ -272,7 +280,7 @@ All endpoints are **POST** and use JSON.
 - **Response (simplified):**
   - `summary`: string
 
-### 9.4 `POST /quiz`
+### 10.4 `POST /quiz`
 
 - **Purpose:** Generate quiz questions for a course.
 - **Request body (simplified):**
