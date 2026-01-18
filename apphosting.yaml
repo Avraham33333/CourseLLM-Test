@@ -6,5 +6,7 @@ runConfig:
   # more instances in response to increased traffic.
   maxInstances: 1
 
-# Firebase App Hosting auto-injects FIREBASE_WEBAPP_CONFIG at build time
-# The app reads this in src/lib/firebase.ts
+# Expose Firebase config to client-side Next.js code
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_WEBAPP_CONFIG
+    value: ${FIREBASE_WEBAPP_CONFIG}
