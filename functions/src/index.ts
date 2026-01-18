@@ -82,9 +82,8 @@ async function updateDocumentStatusToUploaded(dataConnect: any, filePath: string
 }
 
 // Triggered when ANY file is finalized (uploaded/created) in the default bucket.
-// Using the .firebasestorage.app bucket format that the client SDK uses
+// No bucket specified = uses the project's default bucket automatically
 export const onFileUpload = onObjectFinalized(
-  {bucket: "se-with-llms.firebasestorage.app"},
   async (event: StorageEvent) => {
     logger.info("onFileUpload function triggered.", {event}); // Added for debugging
     const filePath = event.data?.name;
@@ -155,9 +154,8 @@ export const onFileUpload = onObjectFinalized(
 
 // Triggered when a file is deleted.
 // Checks if the deleted file has a corresponding .md file and deletes it.
-// Using the .firebasestorage.app bucket format that the client SDK uses
+// No bucket specified = uses the project's default bucket automatically
 export const onFileDeleted = onObjectDeleted(
-  {bucket: "se-with-llms.firebasestorage.app"},
   async (event: StorageEvent) => {
     const filePath = event.data?.name;
     const bucketName = event.data?.bucket;

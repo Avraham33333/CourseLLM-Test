@@ -1,13 +1,13 @@
 specVersion: "v1"
-serviceId: "coursellm-firebase"
-location: "us-central1"
+serviceId: "se-with-llms-service"
+location: "us-east4"
 schema:
   source: "./schema"
   datasource:
     postgresql:
-      database: "fdcdb"
+      database: "se-with-llms-database"
       cloudSql:
-        instanceId: "coursellm-firebase-fdc"
+        instanceId: "se-with-llms-instance"
         # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
         # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
 connectorDirs: ["./example"]

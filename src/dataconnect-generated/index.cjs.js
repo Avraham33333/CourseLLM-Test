@@ -15,8 +15,8 @@ exports.DocumentStatus = DocumentStatus;
 
 const connectorConfig = {
   connector: 'example',
-  service: 'coursellm-firebase',
-  location: 'us-central1'
+  service: 'se-with-llms-service',
+  location: 'us-east4'
 };
 exports.connectorConfig = connectorConfig;
 

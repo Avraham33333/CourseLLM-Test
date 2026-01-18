@@ -6,16 +6,5 @@ runConfig:
   # more instances in response to increased traffic.
   maxInstances: 1
 
-env:
-  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: AIzaSyCpX3NTRv_vatnT2idzMp0tjZW4Yxpj828
-  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-    value: se-with-llms.firebaseapp.com
-  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
-    value: se-with-llms
-  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-    value: se-with-llms.firebasestorage.app
-  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-    value: "815919272360"
-  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
-    value: 1:815919272360:web:a4bcae1618235a15a5cd9d
+# Firebase App Hosting auto-injects FIREBASE_WEBAPP_CONFIG at build time
+# The app reads this in src/lib/firebase.ts

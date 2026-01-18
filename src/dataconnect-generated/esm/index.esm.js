@@ -14,8 +14,8 @@ export const DocumentStatus = {
 
 export const connectorConfig = {
   connector: 'example',
-  service: 'coursellm-firebase',
-  location: 'us-central1'
+  service: 'se-with-llms-service',
+  location: 'us-east4'
 };
 
 export const insertUserRef = (dcOrVars, vars) => {
