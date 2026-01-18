@@ -115,8 +115,9 @@ pnpm-lock.yaml
 
 # dataconnect
 dataconnect/.dataconnect
-src/dataconnect-generated/
-src/dataconnect-admin-generated/
+# Allow generated SDKs for deployment
+# src/dataconnect-generated/
+# src/dataconnect-admin-generated/
 
 
 
