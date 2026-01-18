@@ -10,7 +10,7 @@ runConfig:
 # These are exposed to client-side code (NEXT_PUBLIC_ prefix)
 env:
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: AIzaSyDnPLYOlnqPjCj-3uQApzK0x4pfqBtXxfQ
+    value: AIzaSyCpX3NTRv_vatnT2idzMp0tjZW4Yxpj828
   - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
     value: se-with-llms.firebaseapp.com
   - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
@@ -20,4 +20,4 @@ env:
   - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
     value: 815919272360
   - variable: NEXT_PUBLIC_FIREBASE_APP_ID
-    value: 1:815919272360:web:ee61997113a6372e6ab437
+    value: 1:815919272360:web:543b4980eb71c84fa5cd9d
