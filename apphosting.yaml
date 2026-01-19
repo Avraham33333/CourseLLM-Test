@@ -9,6 +9,8 @@ runConfig:
 # Firebase config for se-with-llms project
 # These are exposed to client-side code (NEXT_PUBLIC_ prefix)
 env:
+  - variable: GOOGLE_API_KEY
+    secret: google-api-key
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
     value: AIzaSyCpX3NTRv_vatnT2idzMp0tjZW4Yxpj828
   - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
